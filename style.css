@@ -1,13 +1,13 @@
-#workskin details > summary {
+details > summary {
   list-style: none;
 }
 
-#workskin details > summary::marker,
-#workskin details > summary::-webkit-details-marker {
+details > summary::marker,
+details > summary::-webkit-details-marker {
   display: none;
 }
 
-#workskin .frame {
+.frame {
   background: linear-gradient(to bottom, #784C4D, #000000);
   color: white;
   padding: 15px 10px 15px 15px;
@@ -20,18 +20,18 @@
 }
 
 
-#workskin .scrollmaster {
+.scrollmaster {
   max-height: 550px;
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: thin;
 }
 
-#workskin .inscrl {
+.inscrl {
   margin-right: 15px;
 }
 
-#workskin .song-icon img {
+.song-icon img {
   width: 95%;
   height: auto;
   display: block;
@@ -41,30 +41,30 @@
   margin: 25px auto;
 }
 
-#workskin .titles-left {
+.titles-left {
   float: left;
   text-align: left;
   line-height: 0.4;
   margin: 0px 10px 5px 10px;
 }
 
-#workskin .song-name {
+.song-name {
   font-weight: bold;
   font-size: 19.2px;
 }
 
-#workskin .artist-name {
+.artist-name {
   font-size: 15px;
   color: gray;
 }
 
-#workskin .titles-right {
+.titles-right {
   text-align: right;
   float: right;
   vertical-align: middle;
 }
 
-#workskin .titles-right img {
+.titles-right img {
   width: 30px;
   height: 30px;
   margin: 15px 10px 5px 10px;
@@ -466,4 +466,5 @@
 
 .white {
   color: white;
+
 }
