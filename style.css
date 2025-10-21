@@ -1,0 +1,469 @@
+#workskin details > summary {
+  list-style: none;
+}
+
+#workskin details > summary::marker,
+#workskin details > summary::-webkit-details-marker {
+  display: none;
+}
+
+#workskin .frame {
+  background: linear-gradient(to bottom, #784C4D, #000000);
+  color: white;
+  padding: 15px 10px 15px 15px;
+  border-radius: 20px;
+  max-width: 280px;
+  max-height: 550px;
+  margin: auto;
+  font-family: "Futura", sans-serif;
+  border: 1px solid white;
+}
+
+
+#workskin .scrollmaster {
+  max-height: 550px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+#workskin .inscrl {
+  margin-right: 15px;
+}
+
+#workskin .song-icon img {
+  width: 95%;
+  height: auto;
+  display: block;
+  position: relative;
+  border-radius: 3%;
+  overflow: hidden;
+  margin: 25px auto;
+}
+
+#workskin .titles-left {
+  float: left;
+  text-align: left;
+  line-height: 0.4;
+  margin: 0px 10px 5px 10px;
+}
+
+#workskin .song-name {
+  font-weight: bold;
+  font-size: 19.2px;
+}
+
+#workskin .artist-name {
+  font-size: 15px;
+  color: gray;
+}
+
+#workskin .titles-right {
+  text-align: right;
+  float: right;
+  vertical-align: middle;
+}
+
+#workskin .titles-right img {
+  width: 30px;
+  height: 30px;
+  margin: 15px 10px 5px 10px;
+}
+
+.header {
+  display: flex;
+}
+
+.more, .down-arrow {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+.header-text {
+  font-size: 11.2px;
+  flex-grow: 2;
+  margin: 0 20px;
+  text-align: center;
+  line-height: 0.4;
+}
+
+.playing-from {
+  font-size: 0.8em;
+}
+
+.liked {
+  font-weight: bold;
+}
+
+.plbkb {
+  width: 95%;
+  height: 4px;
+  border-radius: 2px;
+  clear: both;
+  display: flex;
+  background: gray;
+}
+
+.bar1, .bar2, .bar3, .bar4, .bar5, .bar6, .bar7, .bar8 {
+  width: 25%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.bar1:hover, .bar2:hover, .bar3:hover, .bar4:hover, .bar5:hover, .bar6:hover, .bar7:hover, .bar8:hover {
+  background: white;
+  opacity: 1;
+}
+
+.plbkb:has(.bar2:hover) .bar1, .plbkb:has(.bar3:hover) .bar1, .plbkb:has(.bar3:hover) .bar2, .plbkb:has(.bar4:hover) .bar1, 
+.plbkb:has(.bar4:hover) .bar2, .plbkb:has(.bar4:hover) .bar3, .plbkb:has(.bar5:hover) .bar1, .plbkb:has(.bar5:hover) .bar2, 
+.plbkb:has(.bar5:hover) .bar3, .plbkb:has(.bar5:hover) .bar4, .plbkb:has(.bar6:hover) .bar1, .plbkb:has(.bar6:hover) .bar2, 
+.plbkb:has(.bar6:hover) .bar3, .plbkb:has(.bar6:hover) .bar4, .plbkb:has(.bar6:hover) .bar5, .plbkb:has(.bar7:hover) .bar1, 
+.plbkb:has(.bar7:hover) .bar2, .plbkb:has(.bar7:hover) .bar3, .plbkb:has(.bar7:hover) .bar4, .plbkb:has(.bar7:hover) .bar5, 
+.plbkb:has(.bar7:hover) .bar6, .plbkb:has(.bar8:hover) .bar1, .plbkb:has(.bar8:hover) .bar2, .plbkb:has(.bar8:hover) .bar3, 
+.plbkb:has(.bar8:hover) .bar4, .plbkb:has(.bar8:hover) .bar5, .plbkb:has(.bar8:hover) .bar6, .plbkb:has(.bar8:hover) .bar7 {
+  background: white;
+  opacity: 1;
+}
+
+.trackers {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trackers > div {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  z-index: 100;
+  position: relative;
+  top: -7px;
+  background: white;
+}
+
+.plbk:has(.bar1:hover) .tracker1, .plbk:has(.bar2:hover) .tracker1, .plbk:has(.bar3:hover) .tracker1, 
+.plbk:has(.bar4:hover) .tracker1, .plbk:has(.bar5:hover) .tracker1, .plbk:has(.bar6:hover) .tracker1, 
+.plbk:has(.bar7:hover) .tracker1, .plbk:has(.bar8:hover) .tracker1 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tracker2, .tracker3, .tracker4, .tracker5, .tracker6, .tracker7, .tracker8, .tracker9 {
+  opacity: 0;
+  transition: opacity 0.1s;
+  visibility: hidden
+}
+
+.plbk:has(.bar1:hover) .tracker2, .plbk:has(.bar2:hover) .tracker3, .plbk:has(.bar3:hover) .tracker4, 
+.plbk:has(.bar4:hover) .tracker5, .plbk:has(.bar5:hover) .tracker6, .plbk:has(.bar6:hover) .tracker7, 
+.plbk:has(.bar7:hover) .tracker8, .plbk:has(.bar8:hover) .tracker9 {
+  opacity: 1;
+  visibility: visible;
+}
+
+.plbk:hover .tracker1 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tracker1:hover, .tracker2:hover, .tracker3:hover, .tracker4:hover, .tracker5:hover, .tracker6:hover, .tracker7:hover, .tracker8:hover, .tracker9:hover {
+  visibility: visible;
+}
+
+.plbk:has(.tracker2:hover) .bar1, .plbk:has(.tracker3:hover) .bar1, .plbk:has(.tracker3:hover) .bar2, .plbk:has(.tracker4:hover) .bar1, 
+.plbk:has(.tracker4:hover) .bar2, .plbk:has(.tracker4:hover) .bar3, .plbk:has(.tracker5:hover) .bar1, .plbk:has(.tracker5:hover) .bar2, 
+.plbk:has(.tracker5:hover) .bar3, .plbk:has(.tracker5:hover) .bar4, .plbk:has(.tracker6:hover) .bar1, .plbk:has(.tracker6:hover) .bar2, 
+.plbk:has(.tracker6:hover) .bar3, .plbk:has(.tracker6:hover) .bar4, .plbk:has(.tracker6:hover) .bar5, .plbk:has(.tracker7:hover) .bar1, 
+.plbk:has(.tracker7:hover) .bar2, .plbk:has(.tracker7:hover) .bar3, .plbk:has(.tracker7:hover) .bar4, .plbk:has(.tracker7:hover) .bar5, 
+.plbk:has(.tracker7:hover) .bar6, .plbk:has(.tracker8:hover) .bar1, .plbk:has(.tracker8:hover) .bar2, .plbk:has(.tracker8:hover) .bar3, 
+.plbk:has(.tracker8:hover) .bar4, .plbk:has(.tracker8:hover) .bar5, .plbk:has(.tracker8:hover) .bar6, .plbk:has(.tracker8:hover) .bar7,
+.plbk:has(.tracker9:hover) .bar1, .plbk:has(.tracker9:hover) .bar2, .plbk:has(.tracker9:hover) .bar3, .plbk:has(.tracker9:hover) .bar4, 
+.plbk:has(.tracker9:hover) .bar5, .plbk:has(.tracker9:hover) .bar6, .plbk:has(.tracker9:hover) .bar7, .plbk:has(.tracker9:hover) .bar8 {
+  opacity: 1;
+  background: white;
+}
+
+.tracker1:hover, .tracker2:hover, .tracker3:hover, .tracker4:hover, .tracker5:hover, .tracker6:hover, .tracker7:hover, .tracker8:hover, .tracker9:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.like {
+  display: block;
+}
+
+.plus {
+  display: none;
+}
+
+:has(.like-buttons[open]) .like {
+  display: none
+}
+
+:has(.like-buttons[open]) .plus {
+  display: block;
+}
+
+.lyrics {
+  border-radius: 10px;
+  background: #784C4D;
+  padding: 10px;
+  margin: 0 5px;
+  height: 250px;
+}
+
+.lyrc {
+  position: relative; /* establish containing block for absolute fades */
+  overflow: hidden;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0 5px;
+  height: 222px;
+  clear: both;
+}
+
+.lyrc .fade {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 1;
+}
+
+.lyrc .fade.top {
+  top: 0;
+  background: linear-gradient(to bottom, #784C4D, #00000000);
+}
+
+.lyrc .fade.bottom {
+  bottom: 0;
+  background: linear-gradient(to top, #784C4D, #00000000);
+}
+
+.text0 img {
+  width: 15px;
+  height: 15px;
+  float: right;
+  margin: 8px 5px 0 0;
+}
+
+.text0 p {
+  float: left;
+  font-weight: bold;
+  font-size: 12.8px;
+  margin: 10px 5px;
+}
+
+
+.inscrl:has(.bar1:hover) .text1, .inscrl:has(.bar2:hover) .text1, .inscrl:has(.bar3:hover) .text1, 
+.inscrl:has(.bar4:hover) .text1, .inscrl:has(.bar5:hover) .text1, .inscrl:has(.bar6:hover) .text1, 
+.inscrl:has(.bar7:hover) .text1, .inscrl:has(.bar8:hover) .text1 {
+  display: none;
+}
+
+.text2,.text3,.text4,.text5,.text6,.text7,.text8,.text9 {
+  display: none;
+}
+
+.inscrl:has(.bar1:hover) .text2, .inscrl:has(.bar2:hover) .text3, .inscrl:has(.bar3:hover) .text4, 
+.inscrl:has(.bar4:hover) .text5, .inscrl:has(.bar5:hover) .text6, .inscrl:has(.bar6:hover) .text7, 
+.inscrl:has(.bar7:hover) .text8, .inscrl:has(.bar8:hover) .text9 {
+  display: block;
+}
+
+.inscrl:has(.tracker2:hover) .text1, .inscrl:has(.tracker3:hover) .text1, .inscrl:has(.tracker4:hover) .text1, 
+.inscrl:has(.tracker5:hover) .text1, .inscrl:has(.tracker6:hover) .text1, .inscrl:has(.tracker7:hover) .text1, 
+.inscrl:has(.tracker8:hover) .text1, .inscrl:has(.tracker9:hover) .text1 {
+  display: none;
+}
+
+.inscrl:has(.tracker2:hover) .text2, .inscrl:has(.tracker3:hover) .text3, .inscrl:has(.tracker4:hover) .text4, 
+.inscrl:has(.tracker5:hover) .text5, .inscrl:has(.tracker6:hover) .text6, .inscrl:has(.tracker7:hover) .text7, 
+.inscrl:has(.tracker8:hover) .text8, .inscrl:has(.tracker9:hover) .text9 {
+  display: block;
+}
+
+.about {
+  color: black;
+  font-size: 11px;
+  width: 100%;
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 0 0 0;
+}
+
+.about-pic {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 160px;
+  position: relative;
+}
+
+.about-pic img {
+  display: block;
+  overflow: hidden;
+  margin: 0 5px;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fade-top2 {
+  position: absolute;
+  left: 5px;
+  top: 0;
+  width: 96%;
+  height: 40px;
+  z-index: 1;
+  background: linear-gradient(to bottom, #333333AA, #00000000);
+  border-radius: 10px 10px 0 0;
+}
+
+.about-text {
+  background: #2c2c2c;
+  color: gray;
+  margin: 0 5px;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  padding: 15px 10px 15px 15px;
+}
+
+.about-the-artist {
+  color: white;
+  z-index: 2;
+  position: absolute;
+  top: -155px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.follow {
+  border: 1px solid gray;
+  border-radius: 15px;
+  margin: 0;
+  padding: 6px 10px 5px 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.about-sides {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.about-right {
+  margin: 0;
+  align-content: center;
+}
+
+.about-left > p {
+  margin: 5px 0 0 0;
+}
+
+.about-left .artist-name-2 {
+  font-size: 17px;
+  text-wrap: wrap;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.follow[open] .follow-p1, .shuffle-btn[open] .shuffle, .play-pause[open] .play, .loop-btn[open] .loop {
+  display: none;
+}
+
+.follow[open] .follow-p2, .shuffle-btn[open] .shuffle1, .play-pause[open] .pause, .loop-btn[open] .loop1 {
+  display: inline;
+}
+
+.follow .follow-p2, .shuffle-btn .shuffle1, .play-pause .pause, .loop-btn .loop1 {
+  display: none;
+}
+
+.follow .follow-p1, .shuffle-btn .shuffle, .play-pause .play, .loop-btn .loop {
+  display: inline;
+}
+
+.verify {
+  width: 8px;
+  height: 8px;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  position: absolute;
+  top: 42px;
+  left: 150px;
+  z-index: 0;
+}
+
+.desc {
+  margin-top: 18px;
+}
+
+.plbk-ctrls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.shuffle, .shuffle1, .previous, .next, .loop, .loop1 {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.shuffle-btn, .loop-btn {
+  padding-top: 5px;
+}
+
+.play, .pause {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+}
+
+.device img, .share, .queue {
+  width: 20px;
+  height: 20px;
+}
+
+.device p {
+  margin: 0 0 0 5px;
+  font-size: 12px;
+  align-self: center;
+}
+
+.device {
+  display: flex;
+  flex-grow: 2;
+}
+
+.other-ctrls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.other-ctrls > img {
+  margin: 0 0 0 10px;
+}
+
+.green {
+  color: #1ED75F;
+}
+
+.white {
+  color: white;
+}
