@@ -466,5 +466,16 @@ details > summary::-webkit-details-marker {
 
 .white {
   color: white;
+}
 
+#workskin .timestamps {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 7px 0px 9px;
+}
+
+#workskin .timestamps p {
+  margin: 0;
+  font-size: 12px;
+  color: gray;
 }
